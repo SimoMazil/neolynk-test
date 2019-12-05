@@ -1,4 +1,4 @@
-const messages = [
+const data = [
   {
     message: "This will be great for business reports. I will definitely download this.",
     status: "public"
@@ -9,4 +9,4 @@ const messages = [
   }
 ]
 
-export default messages
+export default data
