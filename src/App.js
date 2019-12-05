@@ -1,10 +1,12 @@
 import React from 'react';
+import MessageList from '../src/components/MessageList'
+import { Container } from 'semantic-ui-react';
 
 function App() {
   return (
-    <div>
-      Hello World !
-    </div>
+    <Container>
+      <MessageList />
+    </Container>
   );
 }
 
