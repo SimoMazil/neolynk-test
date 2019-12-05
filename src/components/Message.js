@@ -6,11 +6,11 @@ const Message = ({message, status}) => {
     <Comment>
       <Comment.Content>
         <Comment.Text>
-          This will be great for business reports. I will definitely download this.
+          {message}
         </Comment.Text>
         <Comment.Action>
           <Label>
-            <Icon name='unlock' /> Public
+            <Icon name={status === 'public' ? 'unlock' : 'lock'} /> {status}
           </Label>
         </Comment.Action>
       </Comment.Content>
