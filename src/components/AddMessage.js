@@ -13,7 +13,7 @@ const AddMessage = ({submit}) => {
   const onClick = () => {
     const validator = formValidator(message)
     if(validator) setError(validator)
-    else submit({message, status})
+    else setError(""); submit({message, status})
   }
 
   const onChangeText = e => {
