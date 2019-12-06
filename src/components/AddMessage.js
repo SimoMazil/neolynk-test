@@ -12,8 +12,8 @@ const AddMessage = ({submit}) => {
 
   const onClick = () => {
     const validator = formValidator(message)
-    if(validator) setError(validator)
-    else setError(""); submit({message, status})
+    if(validator) { setError(validator) }
+    else { setError(""); submit({message, status}) }
   }
 
   const onChangeText = e => {
@@ -22,11 +22,6 @@ const AddMessage = ({submit}) => {
 
   const onChangeCheckbox = (e, {checked}) => {
     checked ? onChangeStatus("private") : onChangeStatus("public")
-  }
-
-  const formValidator = (message) => {
-    if(!message) return "Message can't be blank!"
-    return false;
   }
 
   return (
@@ -43,6 +38,11 @@ const AddMessage = ({submit}) => {
 
 AddMessage.propTypes = {
   submit: PropTypes.func.isRequired
+}
+
+export const formValidator = (message) => {
+  if(!message) return "Message can't be blank!"
+  return false;
 }
 
 export default AddMessage;
