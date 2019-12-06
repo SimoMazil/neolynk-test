@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Comment, Label, Icon, Divider } from 'semantic-ui-react'
 
 const Message = ({message, status}) => {
@@ -17,6 +19,11 @@ const Message = ({message, status}) => {
       <Divider />
     </Comment>
   )
+}
+
+Message.propTypes = {
+  message: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired
 }
 
 export default Message;
