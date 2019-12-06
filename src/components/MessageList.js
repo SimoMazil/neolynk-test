@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Comment } from 'semantic-ui-react'
 
 import Message from './Message'

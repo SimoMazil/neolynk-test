@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { Form, Button, Checkbox } from 'semantic-ui-react'
 
 const AddMessage = ({submit}) => {
@@ -24,6 +26,10 @@ const AddMessage = ({submit}) => {
       <Checkbox label='check to make the message private' value={status} onChange={onChangeCheckbox}/>
     </Form>
   )
+}
+
+AddMessage.propTypes = {
+  submit: PropTypes.func.isRequired
 }
 
 export default AddMessage;
